@@ -30,6 +30,8 @@ Extra-source-files:  freetype2/include/*.h
                      freetype2/src/cff/*.h
                      freetype2/src/cid/*.c
                      freetype2/src/cid/*.h
+                     freetype2/src/dlg/*.c
+                     freetype2/src/dlg/*.h
                      freetype2/src/gxvalid/*.c
                      freetype2/src/gxvalid/*.h
                      freetype2/src/gzip/*.c
@@ -50,10 +52,14 @@ Extra-source-files:  freetype2/include/*.h
                      freetype2/src/psnames/*.h
                      freetype2/src/raster/*.c
                      freetype2/src/raster/*.h
+                     freetype2/src/sdf/*.c
+                     freetype2/src/sdf/*.h
                      freetype2/src/sfnt/*.c
                      freetype2/src/sfnt/*.h
                      freetype2/src/smooth/*.c
                      freetype2/src/smooth/*.h
+                     freetype2/src/svg/*.c
+                     freetype2/src/svg/*.h
                      freetype2/src/truetype/*.c
                      freetype2/src/truetype/*.h
                      freetype2/src/type1/*.c
@@ -183,7 +189,7 @@ Library
                  FreeType.Miscellaneous.Incremental.Types
                  FreeType.Miscellaneous.TrueType.Types
 
-  Build-depends: base >= 4.10 && < 4.17
+  Build-depends: base >= 4.10 && < 5
                , storable-offset
 
   Build-tools: hsc2hs
@@ -208,7 +214,9 @@ Library
                 freetype2/src/autofit
                 freetype2/src/pshinter
                 freetype2/src/raster
+                freetype2/src/sdf
                 freetype2/src/smooth
+                freetype2/src/svg
                 freetype2/src/cache
                 freetype2/src/gzip
                 freetype2/src/lzw
@@ -241,7 +249,6 @@ Library
              freetype2/src/base/ftpfr.c
              freetype2/src/base/ftstroke.c
              freetype2/src/base/ftsynth.c
-             freetype2/src/base/ftsystem.c
              freetype2/src/base/fttype1.c
              freetype2/src/base/ftwinfnt.c
              freetype2/src/bzip2/ftbzip2.c
@@ -258,7 +265,9 @@ Library
              freetype2/src/autofit/autofit.c
              freetype2/src/pshinter/pshinter.c
              freetype2/src/raster/raster.c
+             freetype2/src/sdf/sdf.c
              freetype2/src/smooth/smooth.c
+             freetype2/src/svg/svg.c
              freetype2/src/cache/ftcache.c
              freetype2/src/gzip/ftgzip.c
              freetype2/src/lzw/ftlzw.c
@@ -286,7 +295,7 @@ test-suite dynamic-function-check
   type: exitcode-stdio-1.0
   main-is: Dynamic.hs
   hs-source-dirs: test/dynamic
-  build-depends: base >= 4.10 && < 4.17
+  build-depends: base >= 4.10 && < 5
                , freetype2
 
   other-modules: Dynamic.Report
@@ -295,7 +304,7 @@ test-suite field-coherence-check
   type: exitcode-stdio-1.0
   main-is: Fields.hs
   hs-source-dirs: test/fields
-  build-depends: base >= 4.10 && < 4.17
+  build-depends: base >= 4.10 && < 5
                , freetype2
                , template-haskell
 

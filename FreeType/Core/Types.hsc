@@ -104,6 +104,7 @@ module FreeType.Core.Types
 import           FreeType.Core.Types.Types
 
 #include "ft2build.h"
+#include FT_FREETYPE_H
 #include FT_IMAGE_H
 
 
