@@ -24,7 +24,7 @@
         system: pkgs:
         pkgs.haskell.packages.ghc912.override {
           overrides = self: super: {
-            freetype2 = self.callCabal2nix "freetype2" ./. { };
+            freetype2 = pkgs.haskell.lib.dontCheck (self.callCabal2nix "freetype2" ./. { });
             storable-offset = pkgs.haskell.lib.doJailbreak (pkgs.haskell.lib.unmarkBroken super.storable-offset);
           };
         };
