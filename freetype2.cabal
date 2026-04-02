@@ -31,7 +31,6 @@ Extra-source-files:  freetype2/include/*.h
                      freetype2/src/cid/*.c
                      freetype2/src/cid/*.h
                      freetype2/src/dlg/*.c
-                     freetype2/src/dlg/*.h
                      freetype2/src/gxvalid/*.c
                      freetype2/src/gxvalid/*.h
                      freetype2/src/gzip/*.c
